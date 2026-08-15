@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Smith Family Dental | Boise, ID — (208) 555-0233</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FFFFFF;--ac:#7FD8BE;--acd:#5BC4A5;--w:#fff;--gl:#F8FBF9;--gm:#7A8A85;--rc:40px;--rp:50px;--ri:80px;--grad:linear-gradient(135deg,#7FD8BE,#5BC4A5);--fd:'Nunito',sans-serif;--fb:'Quicksand',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);color:#211C1F;background:var(--w);overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.ctn{max-width:1200px;margin:0 auto;padding:0 24px}
+.sl{font-family:var(--fd);font-size:.85rem;letter-spacing:3px;text-transform:uppercase;color:var(--ac);margin-bottom:8px;font-weight:700}
+.st{font-family:var(--fd);font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.1;margin-bottom:12px;color:#211C1F}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:var(--rp);font-family:var(--fb);font-size:1rem;font-weight:700;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.bp{background:var(--grad);color:#fff;box-shadow:0 4px 20px #7FD8BE40}
+.bp:hover{box-shadow:0 6px 28px #7FD8BE60}
+.bo{border:2px solid var(--ac);color:var(--ac);background:transparent}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);padding:12px 0;transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.15)}
+.nav .ctn{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--fd);font-size:1.4rem;color:#211C1F;letter-spacing:1px}
+.nav-logo span{color:var(--ac)}
+.nav-phone{display:flex;align-items:center;gap:8px;color:#211C1F;font-weight:700;font-size:1rem;white-space:nowrap}
+.nav-phone svg{fill:var(--ac)}
+.nav-links{display:none;gap:20px;list-style:none}
+.nav-links a{color:rgba(33,28,31,.6);font-size:.85rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--ac)}
+@media(min-width:768px){.nav-links{display:flex}}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;background:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;background-color:#1a1a1a}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,20,35,.85) 0%,rgba(15,20,35,0.5) 50%,rgba(33,28,31,0) 100%)}
+.hero .ctn{position:relative;z-index:2;text-align:center;max-width:800px;padding:0 24px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:#fff;padding:10px 22px;border-radius:var(--rp);font-weight:700;font-size:.8rem;margin-bottom:24px;letter-spacing:1px}
+.badge .dot{width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:var(--fd);font-size:clamp(2.4rem,6vw,5rem);color:#fff;line-height:1.05;margin-bottom:20px;}
+.hero p{color:rgba(255,255,255,.75);font-size:1.1rem;max-width:600px;margin:0 auto 32px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.hero .ph{font-size:1.2rem;color:#fff}
+
+/* SERVICES */
+.svcs{padding:90px 0;background:#F8FBF9}
+.svcs .sl{color:var(--ac)}.svcs .st{color:#211C1F}
+.svcs p.sub{color:#7A8A85;max-width:560px;margin-top:8px}
+.svcs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:36px;justify-items:center;margin-top:44px}
+.si{text-align:center;max-width:150px}
+.si-icon{width:var(--ri);height:var(--ri);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;transition:box-shadow .3s,transform .3s;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.si:hover .si-icon{box-shadow:0 0 28px #7FD8BE50;transform:scale(1.06)}
+.si h3{font-family:var(--fd);font-size:1rem;letter-spacing:1.5px;color:#211C1F;font-weight:700}
+.si p{font-size:.8rem;color:#7A8A85;margin-top:4px}
+
+/* AREAS */
+.areas{padding:90px 0;background:var(--gl)}
+.areas .sl{color:var(--ac)}
+.areas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-top:40px}
+.ac{background:#fff;border-radius:var(--rc);padding:24px;text-align:center;box-shadow:0 2px 10px rgba(33,28,31,.05);transition:transform .2s}
+.ac:hover{transform:translateY(-3px)}
+.ac h3{font-family:var(--fd);font-size:1.2rem;color:#211C1F;font-weight:700;margin-bottom:4px}
+.ac p{font-size:.8rem;color:#7A8A85}
+
+/* REVIEWS */
+.revs{position:relative;padding:110px 0;overflow:hidden}
+.revs-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;background-color:#211C1F}
+.revs-bg::after{content:'';position:absolute;inset:0;background:rgba(33,28,31,.88)}
+.revs .ctn{position:relative;z-index:2}
+.revs .sl{color:var(--ac)}
+.revs .st{color:#fff}
+.revs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:40px}
+.rc{background:#fff;border-radius:var(--rc);padding:28px;box-shadow:0 1px 22px 6px rgba(33,28,31,.72);color:#211C1F}
+.rs{display:flex;gap:2px;margin-bottom:12px}
+.rc blockquote{font-size:.9rem;line-height:1.6;margin-bottom:14px;font-style:italic;color:#4a4a4a}
+.ra{display:flex;align-items:center;gap:10px}
+.rav{width:40px;height:40px;border-radius:50%;flex-shrink:0}
+.rm strong{display:block;font-size:.9rem;color:#211C1F}
+.rm span{font-size:.75rem;color:#7A8A85}
+
+/* GALLERY */
+.gal{padding:90px 0;background:var(--w)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.gi{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:#F8FBF9}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gi:hover img{transform:scale(1.05)}
+.gi.lg{grid-column:span 2;grid-row:span 2}
+
+/* TRUST */
+.trust{padding:70px 0;background:#F8FBF9;text-align:center}
+.trust-items{display:flex;flex-wrap:wrap;justify-content:center;gap:44px;margin-top:36px}
+.ti{max-width:180px}
+.tn{font-family:var(--fd);font-size:3rem;color:var(--ac);line-height:1;font-weight:800}
+.tl{color:#7A8A85;font-size:.85rem;margin-top:6px}
+
+/* FOOTER */
+.footer{background:#211C1F;padding:50px 0 24px}
+.footer .ctn{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.fl{font-family:var(--fd);font-size:1.8rem;color:#fff;letter-spacing:1px;margin-bottom:6px}
+.fl span{color:var(--ac)}
+.fli{color:rgba(255,255,255,.5);font-size:.78rem;line-height:1.7}
+.fc{text-align:right}
+.fc p{color:rgba(255,255,255,.6);font-size:.85rem;margin-bottom:10px}
+.fc .bp{font-size:1.1rem;padding:16px 36px}
+.fb{text-align:center;margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);font-size:.72rem}
+
+/* RESPONSIVE */
+@media(max-width:767px){
+  .hero h1{font-size:2.2rem}
+  .svcs-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .si-icon{width:70px;height:70px}
+  .revs-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr 1fr}
+  .gi.lg{grid-column:span 2;grid-row:span 1}
+  .trust-items{gap:28px}
+  .footer .ctn{grid-template-columns:1fr;text-align:center}
+  .fc{text-align:center}
+}
+@media(max-width:480px){
+  .svcs-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .btn{padding:12px 24px;font-size:.9rem}
+  .hero-cta .btn{padding:14px 28px}
+}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+<div class="ctn">
+<div class="nav-logo">SMITH DENTAL<span>.</span></div>
+<ul class="nav-links"><li><a href="#services">Services</a></li><li><a href="#areas">Areas</a></li><li><a href="#reviews">Reviews</a></li></ul>
+<a href="tel:2085550233" class="nav-phone"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>(208) 555-0233</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="ctn">
+<div class="badge"><span class="dot"></span>NOW ACCEPTING NEW PATIENTS</div>
+<h1 data-aos="fade-up">Your Smile Deserves Gentle, Expert Care</h1>
+<p data-aos="fade-up" data-aos-delay="100">Boise's family-friendly dental practice. We make every visit comfortable with gentle techniques, modern technology, and a team that treats you like family.</p>
+<div class="hero-cta" data-aos="fade-up" data-aos-delay="200">
+<a href="tel:2085550233" class="btn bp"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg><span class="ph">(208) 555-0233</span></a>
+<a href="#services" class="btn bo" style="border-color:#fff;color:#fff">Our Services</a>
+</div>
+</div>
+</section>
+
+<section class="svcs" id="services">
+<div class="ctn">
+<div class="sl" data-aos="fade-up">WHAT WE DO</div>
+<h2 class="st" data-aos="fade-up" data-aos-delay="100">OUR SERVICES</h2>
+<p class="sub" data-aos="fade-up" data-aos-delay="150">Professional Dental solutions tailored to your needs. Licensed, insured, and committed to excellence.</p>
+<div class="svcs-grid"><div class="si" data-aos="fade-up" data-aos-delay="0"><div class="si-icon" style="background:linear-gradient(135deg,hsl(10,60%,65%),hsl(10,50%,55%))"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m5.46 5.46l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m5.46-5.46 2.83-2.83" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><h3>Cleanings</h3><p>Gentle & thorough</p></div><div class="si" data-aos="fade-up" data-aos-delay="50"><div class="si-icon" style="background:linear-gradient(135deg,hsl(57,60%,65%),hsl(57,50%,55%))"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m5.46 5.46l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m5.46-5.46 2.83-2.83" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><h3>Whitening</h3><p>Brighten your smile</p></div><div class="si" data-aos="fade-up" data-aos-delay="100"><div class="si-icon" style="background:linear-gradient(135deg,hsl(104,60%,65%),hsl(104,50%,55%))"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m5.46 5.46l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m5.46-5.46 2.83-2.83" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><h3>Fillings</h3><p>Tooth-colored, natural</p></div><div class="si" data-aos="fade-up" data-aos-delay="150"><div class="si-icon" style="background:linear-gradient(135deg,hsl(151,60%,65%),hsl(151,50%,55%))"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m5.46 5.46l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m5.46-5.46 2.83-2.83" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><h3>Crowns</h3><p>Same-day CEREC</p></div><div class="si" data-aos="fade-up" data-aos-delay="200"><div class="si-icon" style="background:linear-gradient(135deg,hsl(198,60%,65%),hsl(198,50%,55%))"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m5.46 5.46l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m5.46-5.46 2.83-2.83" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><h3>Orthodontics</h3><p>Invisalign provider</p></div><div class="si" data-aos="fade-up" data-aos-delay="250"><div class="si-icon" style="background:linear-gradient(135deg,hsl(245,60%,65%),hsl(245,50%,55%))"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m5.46 5.46l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m5.46-5.46 2.83-2.83" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><h3>Pediatric</h3><p>Kids love us!</p></div><div class="si" data-aos="fade-up" data-aos-delay="300"><div class="si-icon" style="background:linear-gradient(135deg,hsl(292,60%,65%),hsl(292,50%,55%))"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m5.46 5.46l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m5.46-5.46 2.83-2.83" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><h3>Emergency</h3><p>Same-day care</p></div><div class="si" data-aos="fade-up" data-aos-delay="350"><div class="si-icon" style="background:linear-gradient(135deg,hsl(339,60%,65%),hsl(339,50%,55%))"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m5.46 5.46l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m5.46-5.46 2.83-2.83" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div><h3>Exams & X-Rays</h3><p>Comprehensive check</p></div></div>
+</div>
+</section>
+
+<section class="areas" id="areas">
+<div class="ctn">
+<div class="sl" data-aos="fade-up">WHERE WE WORK</div>
+<h2 class="st" data-aos="fade-up" data-aos-delay="100">SERVICE AREAS</h2>
+<div class="areas-grid"><div class="ac" data-aos="fade-up" data-aos-delay="0"><h3>Boise</h3><p>Main office — downtown</p></div><div class="ac" data-aos="fade-up" data-aos-delay="50"><h3>Meridian</h3><p>Family dentistry</p></div><div class="ac" data-aos="fade-up" data-aos-delay="100"><h3>Eagle</h3><p>All ages welcome</p></div><div class="ac" data-aos="fade-up" data-aos-delay="150"><h3>Nampa</h3><p>Gentle care</p></div><div class="ac" data-aos="fade-up" data-aos-delay="200"><h3>Kuna</h3><p>By appointment</p></div><div class="ac" data-aos="fade-up" data-aos-delay="250"><h3>Star</h3><p>New patients welcome</p></div></div>
+</div>
+</section>
+
+<section class="revs" id="reviews">
+<div class="revs-bg"></div>
+<div class="ctn">
+<div class="sl" data-aos="fade-up">GOOGLE REVIEWS</div>
+<h2 class="st" data-aos="fade-up" data-aos-delay="100">WHAT OUR CUSTOMERS SAY</h2>
+<div class="revs-grid"><div class="rc" data-aos="fade-up" data-aos-delay="100"><div class="rs"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><blockquote>My 6-year-old actually looks forward to her dental appointments here. Dr. Smith and his hygienist are so patient. The office feels more like a spa than a dental clinic.</blockquote><div class="ra"><div class="rav" style="background:linear-gradient(135deg,#667eea,#764ba2)"></div><div class="rm"><strong>Emily S.</strong><span>5 days ago · Boise</span></div></div></div><div class="rc" data-aos="fade-up" data-aos-delay="200"><div class="rs"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><blockquote>I hadn't been to a dentist in 8 years because of anxiety. Dr. Smith walked me through everything, never rushed, and the sedation option made it completely painless.</blockquote><div class="ra"><div class="rav" style="background:linear-gradient(135deg,#f093fb,#f5576c)"></div><div class="rm"><strong>Carlos M.</strong><span>2 weeks ago · Meridian</span></div></div></div><div class="rc" data-aos="fade-up" data-aos-delay="300"><div class="rs"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><blockquote>Got Invisalign here and the results are amazing. They used digital scans instead of messy impressions, and I could see a preview of my new smile before starting.</blockquote><div class="ra"><div class="rav" style="background:linear-gradient(135deg,#4facfe,#00f2fe)"></div><div class="rm"><strong>Hannah J.</strong><span>1 month ago · Eagle</span></div></div></div><div class="rc" data-aos="fade-up" data-aos-delay="400"><div class="rs"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#F5A623" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div><blockquote>Chipped a tooth on a Friday evening. Called first thing Saturday and they got me in by 10am. The crown looks and feels completely natural.</blockquote><div class="ra"><div class="rav" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)"></div><div class="rm"><strong>Tom B.</strong><span>3 weeks ago · Nampa</span></div></div></div></div>
+</div>
+</section>
+
+<section class="gal">
+<div class="ctn">
+<div class="sl" data-aos="fade-up">OUR WORK</div>
+<h2 class="st" data-aos="fade-up" data-aos-delay="100">RECENT PROJECTS</h2>
+<div class="gal-grid"><div class="gi lg" data-aos="fade-up" data-aos-delay="0"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Smith Family Dental work" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#7FD8BE22,#7FD8BE44)';this.style.display='none'"></div><div class="gi" data-aos="fade-up" data-aos-delay="80"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Smith Family Dental work" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#7FD8BE22,#7FD8BE44)';this.style.display='none'"></div><div class="gi" data-aos="fade-up" data-aos-delay="160"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Smith Family Dental work" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#7FD8BE22,#7FD8BE44)';this.style.display='none'"></div><div class="gi" data-aos="fade-up" data-aos-delay="240"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt="Smith Family Dental work" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#7FD8BE22,#7FD8BE44)';this.style.display='none'"></div></div>
+</div>
+</section>
+
+<section class="trust">
+<div class="ctn">
+<div class="sl" data-aos="fade-up" style="color:var(--ac)">WHY CHOOSE US</div>
+<h2 class="st" data-aos="fade-up" data-aos-delay="100" style="color:#211C1F">THE DENTAL DIFFERENCE</h2>
+<div class="trust-items"><div class="ti" data-aos="zoom-in"><div class="tn">15</div><div class="tl">Years Serving Boise</div></div><div class="ti" data-aos="zoom-in"><div class="tn">10,000+</div><div class="tl">Happy Patients</div></div><div class="ti" data-aos="zoom-in"><div class="tn">4.9★</div><div class="tl">Google Rating</div></div><div class="ti" data-aos="zoom-in"><div class="tn">5</div><div class="tl">Dentists on Staff</div></div></div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="ctn">
+<div>
+<div class="fl">SMITH DENTAL<span>.</span></div>
+<p class="fli">ID Dental License #DD-4421<br>© 2026 Smith Family Dental. All rights reserved.<br>Boise, ID</p>
+</div>
+<div class="fc">
+<p>Ready to get started?</p>
+<a href="tel:2085550233" class="btn bp"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>(208) 555-0233</a>
+</div>
+</div>
+<p class="fb">SiteForge v2 · Generated with award-winning design standards</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:800,easing:'ease-out',once:true,offset:80});
+// Nav scroll effect
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>50);
+});
+// Fallback: if hero image fails, use gradient
+document.querySelector('.hero').addEventListener('error',function(e){
+  if(e.target.tagName==='IMG'){
+    this.style.background='linear-gradient(135deg,#7FD8BE,#5BC4A5)';
+  }
+},true);
+</script>
+</body>
+</html>
