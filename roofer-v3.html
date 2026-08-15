@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Summit Roofing Co. | Tulsa's Friendly Roofing Experts — Free Inspections</title>
+<meta name="description" content="Family-owned Tulsa roofer since 1998. Free inspections, honest quotes, most roofs done in 1-2 days. Call (918) 555-0184 today.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1f44;--navy2:#132d5e;--accent:#e85d04;--accent-h:#f4741f;--light:#f7f8fb;--ink:#1c2430;--mut:#5a6472;--line:#e3e7ee;--ok:#0e8f5e}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Rubik',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 5vw}
+/* header */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;max-width:1180px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:38px;height:38px;border-radius:9px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}
+.logo b{color:var(--navy);font-size:19px;font-weight:800;letter-spacing:.2px}
+.logo span{color:var(--mut);font-size:12px;display:block;font-weight:500;margin-top:-3px}
+.bar .right{display:flex;gap:14px;align-items:center}
+.phone{font-weight:700;color:var(--navy);text-decoration:none;font-size:16px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:12px 22px;border-radius:8px;text-decoration:none;font-size:15px;border:none;cursor:pointer;transition:.15s}
+.btn:hover{background:var(--accent-h);transform:translateY(-1px)}
+.btn.ghost{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+/* hero */
+.hero{position:relative;color:#fff;isolation:isolate}
+.hero img.bg{width:100%;height:640px;object-fit:cover;filter:saturate(1.02)}
+.hero .over{position:absolute;inset:0;background:linear-gradient(100deg,rgba(7,17,38,.88) 0%,rgba(7,17,38,.62) 46%,rgba(7,17,38,.18) 100%);display:flex;align-items:center}
+.hero .in{max-width:640px;padding:0 5vw}
+.kick{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:13.5px;font-weight:500;margin-bottom:18px}
+.kick .dot{width:8px;height:8px;border-radius:50%;background:#7be3a8}
+h1{font-size:clamp(34px,5vw,52px);line-height:1.08;font-weight:800;letter-spacing:-.5px}
+h1 em{font-style:normal;color:#ffb703}
+.hero p.sub{font-size:18px;color:#dbe3f0;margin:18px 0 26px;max-width:520px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.hero .micro{margin-top:16px;font-size:13px;color:#c3cde0}
+/* trust chips */
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.chip{background:#fff;padding:18px 12px;text-align:center}
+.chip b{display:block;font-size:22px;color:var(--navy);font-weight:800}
+.chip span{font-size:13px;color:var(--mut)}
+/* sections */
+section{padding:72px 0}
+section.alt{background:var(--light)}
+.eyebrow{color:var(--accent);font-weight:700;font-size:13.5px;letter-spacing:1.6px;text-transform:uppercase}
+h2{font-size:clamp(26px,3.4vw,36px);color:var(--navy);font-weight:800;letter-spacing:-.3px;margin:8px 0 14px}
+.lede{color:var(--mut);max-width:560px;font-size:16.5px}
+/* services */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 24px;transition:.15s}
+.card:hover{box-shadow:0 10px 30px rgba(10,31,68,.09);transform:translateY(-2px);border-color:#c9d2e2}
+.card .ico{width:46px;height:46px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:21px;margin-bottom:14px}
+.card h3{color:var(--navy);font-size:18px;margin-bottom:8px}
+.card p{color:var(--mut);font-size:14.5px}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px;counter-reset:st}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px 22px}
+.step::before{counter-increment:st;content:counter(st);position:absolute;top:-16px;left:20px;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:grid;place-items:center;font-size:16px}
+.step h3{color:var(--navy);font-size:16.5px;margin:8px 0 6px}
+.step p{color:var(--mut);font-size:14px}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+.stars{color:#ffb703;letter-spacing:2px;font-size:16px}
+.rev p{font-size:14.5px;color:var(--ink);margin:12px 0 16px}
+.rev .who{display:flex;align-items:center;gap:10px}
+.rev .who .av{width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px}
+.rev .who b{font-size:14px;color:var(--navy);display:block}
+.rev .who span{font-size:12.5px;color:var(--mut)}
+.gbadge{display:flex;gap:6px;align-items:center;margin-top:26px;justify-content:center;color:var(--mut);font-size:14px}
+.gbadge b{color:var(--navy)}
+/* gallery */
+.gal{display:grid;grid-template-columns:1.5fr 1fr;gap:16px;margin-top:36px}
+.gal img{border-radius:14px;height:100%;width:100%;object-fit:cover;min-height:260px}
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-top:12px;overflow:hidden}
+summary{padding:18px 22px;font-weight:600;color:var(--navy);cursor:pointer;list-style:none;position:relative;padding-right:40px}
+summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--accent);font-weight:700}
+details[open] summary::after{content:"–"}
+details .a{padding:0 22px 18px;color:var(--mut);font-size:14.5px}
+/* final */
+.final{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:#c3cde0;max-width:480px;margin:0 auto 26px}
+.final .btn{font-size:16px;padding:15px 30px}
+.final .tel{display:block;margin-top:16px;color:#fff;font-weight:700;font-size:20px;text-decoration:none}
+/* footer */
+footer{padding:34px 0;color:var(--mut);font-size:13.5px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* sticky call bar (mobile) */
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:200;display:none;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 8px;font-weight:700;text-decoration:none;font-size:15px}
+.callbar a.call{background:var(--navy);color:#fff}
+.callbar a.quote{background:var(--accent);color:#fff}
+@media(max-width:900px){
+ .chips{grid-template-columns:repeat(2,1fr)}
+ .grid3,.revs{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .gal{grid-template-columns:1fr}
+ .callbar{display:grid}
+ body{padding-bottom:58px}
+ .bar .btn{display:none}
+}
+@media(max-width:620px){
+ .grid3,.revs,.steps{grid-template-columns:1fr}
+ .hero img.bg{height:560px}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RoofingContractor","name":"Summit Roofing Co.","telephone":"+1-918-555-0184","address":{"@type":"PostalAddress","streetAddress":"4821 S Memorial Dr","addressLocality":"Tulsa","addressRegion":"OK","postalCode":"74145","addressCountry":"US"},"priceRange":"$$","areaServed":"Tulsa, OK","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"187"},"openingHours":"Mo-Sa 07:00-19:00"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do you really do free inspections?","acceptedAnswer":{"@type":"Answer","text":"Yes — every inspection is free with zero obligation. We'll walk your roof, photograph anything we find, and show you the evidence before quoting a dollar."}},
+{"@type":"Question","name":"How long does a roof replacement take?","acceptedAnswer":{"@type":"Answer","text":"Most Tulsa homes are completed in 1-2 days, including full cleanup and a magnetic nail sweep of your yard."}},
+{"@type":"Question","name":"Do you help with insurance claims?","acceptedAnswer":{"@type":"Answer","text":"Yes. Storm damage claims are our specialty — we document everything in the format insurers expect and meet your adjuster on-site."}}]}
+</script>
+</head>
+<body>
+
+<header>
+ <div class="bar">
+  <a class="logo" href="#top"><span class="mark">SR</span><span><b>Summit Roofing</b><span>Tulsa, OK · Since 1998</span></span></a>
+  <div class="right">
+   <a class="phone" href="tel:+19185550184">📞 (918) 555-0184</a>
+   <a class="btn" href="#quote">Free Inspection</a>
+  </div>
+ </div>
+</header>
+
+<section class="hero" id="top" style="padding:0">
+ <img class="bg" src="assets/hero.jpg" alt="Summit Roofing crew installing shingles on a Tulsa home">
+ <div class="over"><div class="in">
+  <span class="kick"><span class="dot"></span> Currently booking inspections this week</span>
+  <h1>Tulsa's friendly roofing experts.<br><em>Honest work, fair prices.</em></h1>
+  <p class="sub">Family-owned since 1998. Free inspections with photo evidence — you see exactly what we see before you spend a dollar.</p>
+  <div class="cta-row">
+   <a class="btn" href="tel:+19185550184">📞 Call (918) 555-0184</a>
+   <a class="btn ghost" href="#quote" style="border-color:#fff;color:#fff">Request My Free Inspection</a>
+  </div>
+  <p class="micro">★★★★★ 4.9 from 187 Tulsa neighbors · Licensed &amp; insured · GAF certified</p>
+ </div></div>
+</section>
+
+<div class="chips">
+ <div class="chip"><b>27+</b><span>Years serving Tulsa</span></div>
+ <div class="chip"><b>3,400+</b><span>Roofs completed</span></div>
+ <div class="chip"><b>4.9★</b><span>Google rating</span></div>
+ <div class="chip"><b>24 hr</b><span>Storm response</span></div>
+</div>
+
+<section>
+ <div class="wrap">
+  <span class="eyebrow">What we do</span>
+  <h2>Everything your roof needs, one crew</h2>
+  <p class="lede">No subcontractors, no runaround. The person who inspects your roof is on the crew that fixes it.</p>
+  <div class="grid3">
+   <div class="card"><div class="ico">🏠</div><h3>Roof Replacement</h3><p>Architectural shingles, metal, and tile. Most homes finished in 1-2 days with full yard cleanup.</p></div>
+   <div class="card"><div class="ico">🔧</div><h3>Roof Repair</h3><p>Leaks, missing shingles, flashing failures. If a repair will last, we'll tell you — and when it won't.</p></div>
+   <div class="card"><div class="ico">⛈️</div><h3>Storm &amp; Insurance</h3><p>Hail and wind damage documented in insurer-ready format. We meet your adjuster on-site.</p></div>
+   <div class="card"><div class="ico">🔍</div><h3>Free Inspections</h3><p>Photo evidence of everything we find. Zero obligation, zero pressure — ever.</p></div>
+   <div class="card"><div class="ico">🪟</div><h3>Gutters &amp; Siding</h3><p>Seamless gutters, soffit and fascia. One crew for the whole exterior.</p></div>
+   <div class="card"><div class="ico">🏢</div><h3>Commercial</h3><p>Flat and low-slope systems for local businesses, with after-hours installation available.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt">
+ <div class="wrap">
+  <span class="eyebrow">How it works</span>
+  <h2>Four steps, zero surprises</h2>
+  <div class="steps">
+   <div class="step"><h3>Free inspection</h3><p>We walk your roof and photograph every issue — you see what we see.</p></div>
+   <div class="step"><h3>Honest quote</h3><p>Line-item pricing in plain English. Repair if repair will last; replace only when it's time.</p></div>
+   <div class="step"><h3>1-2 day install</h3><p>Certified crew, quality underlayment, magnetic nail sweep when we're done.</p></div>
+   <div class="step"><h3>Follow-through</h3><p>Workmanship warranty, registration handled, and a real human answers when you call.</p></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <span class="eyebrow">Neighbors' words</span>
+  <h2>Why Tulsa keeps calling us back</h2>
+  <div class="revs">
+   <div class="rev"><div class="stars">★★★★★</div><p>"Hail wrecked our roof in April. They met the insurance adjuster, handled all the paperwork, and the new roof was on in two days. Yard was cleaner after than before."</p><div class="who"><span class="av">SM</span><span><b>Sarah M.</b><span>South Tulsa</span></span></div></div>
+   <div class="rev"><div class="stars">★★★★★</div><p>"Two other companies told me I needed a full replacement. Summit showed me photos and said a repair would hold for years. Guess who got my business — and my mom's."</p><div class="who"><span class="av">DR</span><span><b>Dale R.</b><span>Broken Arrow</span></span></div></div>
+   <div class="rev"><div class="stars">★★★★★</div><p>"Fair price, fast crew, and they actually answer the phone. After three roofers who ghosted me, that alone was worth five stars."</p><div class="who"><span class="av">PK</span><span><b>Priya K.</b><span>Jenks</span></span></div></div>
+  </div>
+  <div class="gbadge">⭐ <b>4.9 on Google</b> · 187 reviews · GAF Certified · BBB A+</div>
+ </div>
+</section>
+
+<section class="alt">
+ <div class="wrap">
+  <span class="eyebrow">Recent work</span>
+  <h2>Real Tulsa roofs, real results</h2>
+  <div class="gal">
+   <img src="assets/hero.jpg" alt="Full roof replacement in progress">
+   <img src="assets/work1.jpg" alt="Architectural shingle detail work">
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <span class="eyebrow">Straight answers</span>
+  <h2>Questions we hear every week</h2>
+  <details open><summary>Do you really do free inspections?</summary><div class="a">Yes — every inspection is free with zero obligation. We photograph everything and show you the evidence before quoting a dollar.</div></details>
+  <details><summary>How long does a roof replacement take?</summary><div class="a">Most Tulsa homes are completed in 1-2 days, including full cleanup and a magnetic nail sweep of your yard.</div></details>
+  <details><summary>Do you help with insurance claims?</summary><div class="a">Yes. Storm damage is our specialty — we document in the format insurers expect and meet your adjuster on-site.</div></details>
+  <details><summary>Repair or replace — how do I know you're being honest?</summary><div class="a">Every recommendation comes with photos. If a repair will honestly last, we say so. We'd rather earn your next roof than sell you one early.</div></details>
+ </div>
+</section>
+
+<section class="final" id="quote">
+ <div class="wrap">
+  <span class="eyebrow" style="color:#ffb703">Zero pressure, zero cost</span>
+  <h2>Get your free inspection this week</h2>
+  <p>Most inspections take 30 minutes. You get photos, a straight answer, and a fair price — whatever you decide.</p>
+  <a class="btn" href="tel:+19185550184">📞 Call (918) 555-0184</a>
+  <a class="tel" href="mailto:hello@summitroofing.example">or email hello@summitroofing.example</a>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <span>© 2026 Summit Roofing Co. · Tulsa, OK · Licensed &amp; Insured</span>
+  <span>Free inspections · (918) 555-0184</span>
+ </div>
+</footer>
+
+<div class="callbar">
+ <a class="call" href="tel:+19185550184">📞 Call Now</a>
+ <a class="quote" href="#quote">Free Inspection</a>
+</div>
+
+</body>
+</html>
