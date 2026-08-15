@@ -108,9 +108,28 @@ footer .fnote{margin-top:16px;padding:12px 18px;background:#fff;border-radius:12
   .gi.lg{grid-column:span 1;aspect-ratio:4/3}
   nav .phone{display:none}
 }
+
+/* ===== Conversion upgrades 2026-08-15 ===== */
+.trustbar{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;padding:10px 5vw;background:#F4FAFA;border-bottom:1px solid rgba(44,122,123,.15);font:600 13px/1.4 'Nunito',sans-serif;color:#225F60}
+.trustbar b{color:#2C7A7B}
+.callfab{position:fixed;bottom:0;left:0;right:0;z-index:999;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);box-shadow:0 -4px 18px rgba(0,0,0,.10);backdrop-filter:blur(8px)}
+.callfab a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 10px;border-radius:14px;font:800 16px/1 'Nunito',sans-serif;text-decoration:none;letter-spacing:.2px}
+.callfab .call{background:#2C7A7B;color:#fff}
+.callfab .book{background:#fff;color:#2C7A7B;border:2px solid #2C7A7B}
+@media(min-width:768px){.callfab{left:auto;right:22px;bottom:22px;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.16)}}
+body{padding-bottom:72px}
+.faq{max-width:900px;margin:0 auto;padding:64px 5vw}
+.faq h2{font:800 30px/1.2 'Nunito',sans-serif;color:#225F60;margin:0 0 22px}
+.faq details{background:#fff;border:1px solid rgba(44,122,123,.15);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+.faq summary{font:700 16px/1.4 'Nunito',sans-serif;color:#225F60;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font:800 20px/1 'Nunito',sans-serif;color:#2C7A7B;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{font:500 15px/1.65 'Quicksand',sans-serif;color:#4a5568;margin:10px 0 0}
+
 </style>
 </head>
 <body>
+<div class="trustbar"><span><b>★★★★★</b> 4.9 Google Rating</span><span><b>20+</b> Years in Boise</span><span><b>Same-Day</b> Emergency Visits</span><span><b>2</b> Caring Doctors</span></div>
 
 <div class="ribbon">★ NOW ACCEPTING NEW PATIENTS — Boise, ID ★ <span>(208) 376-2726</span></div>
 
@@ -254,6 +273,12 @@ footer .fnote{margin-top:16px;padding:12px 18px;background:#fff;border-radius:12
   <div class="hours">Mon–Wed 7:00 AM – 3:00 PM · Thu–Fri by appointment</div>
 </section>
 
+<section class="faq" id="faq"><h2>Common Questions</h2>
+<details><summary>Are you accepting new patients?</summary><p>Yes — Benchmark Dentistry is currently welcoming new patients of all ages. Call us or book online and we'll find a time that works for you.</p></details>
+<details><summary>Do you accept my insurance?</summary><p>We work with most major insurance providers. Bring your insurance card to your first visit and our front desk will verify your coverage before any treatment.</p></details>
+<details><summary>What if I have a dental emergency?</summary><p>Call us first thing in the morning — we keep same-day emergency slots open for existing and new patients.</p></details>
+<details><summary>How much does a first visit cost?</summary><p>New patient exams and cleanings are offered at a special introductory rate. Call (208) 376-2726 and our team will give you exact pricing for your situation.</p></details>
+</section>
 <footer>
   <div>© 2026 Benchmark Dentistry · Boise, ID · (208) 376-2726</div>
   <div class="fnote">✦ DEMO CONCEPT — This is a complimentary website redesign concept for Benchmark Dentistry, built from publicly available information.</div>
@@ -261,5 +286,6 @@ footer .fnote{margin-top:16px;padding:12px 18px;background:#fff;border-radius:12
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init({once:true,duration:700,offset:80});</script>
+<div class="callfab"><a class="call" href="tel:2083762726">📞 (208) 376-2726</a><a class="book" href="#contact">Book a Visit</a></div>
 </body>
 </html>
