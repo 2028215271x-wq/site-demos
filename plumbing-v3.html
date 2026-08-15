@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClearFlow Plumbing | Fort Collins' Trusted Plumber — 24/7 Emergency Service</title>
+<meta name="description" content="Fort Collins plumber since 2003. Upfront pricing, boot covers on, mess cleaned up. 24/7 emergency service. Call (970) 555-0129 today.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2733;--navy2:#17384a;--accent:#0e7fd8;--accent-h:#2b95e8;--light:#f7f8fb;--ink:#1c2430;--mut:#5a6472;--line:#e3e7ee;--ok:#0e8f5e}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Rubik',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 5vw}
+/* header */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;max-width:1180px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:38px;height:38px;border-radius:9px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}
+.logo b{color:var(--navy);font-size:19px;font-weight:800;letter-spacing:.2px}
+.logo span{color:var(--mut);font-size:12px;display:block;font-weight:500;margin-top:-3px}
+.bar .right{display:flex;gap:14px;align-items:center}
+.phone{font-weight:700;color:var(--navy);text-decoration:none;font-size:16px}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:12px 22px;border-radius:8px;text-decoration:none;font-size:15px;border:none;cursor:pointer;transition:.15s}
+.btn:hover{background:var(--accent-h);transform:translateY(-1px)}
+.btn.ghost{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+/* hero */
+.hero{position:relative;color:#fff;isolation:isolate}
+.hero img.bg{width:100%;height:640px;object-fit:cover;filter:saturate(1.02)}
+.hero .over{position:absolute;inset:0;background:linear-gradient(100deg,rgba(7,17,38,.88) 0%,rgba(7,17,38,.62) 46%,rgba(7,17,38,.18) 100%);display:flex;align-items:center}
+.hero .in{max-width:640px;padding:0 5vw}
+.kick{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:13.5px;font-weight:500;margin-bottom:18px}
+.kick .dot{width:8px;height:8px;border-radius:50%;background:#7be3a8}
+h1{font-size:clamp(34px,5vw,52px);line-height:1.08;font-weight:800;letter-spacing:-.5px}
+h1 em{font-style:normal;color:#7be3a8}
+.hero p.sub{font-size:18px;color:#dbe3f0;margin:18px 0 26px;max-width:520px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.hero .micro{margin-top:16px;font-size:13px;color:#c3cde0}
+/* trust chips */
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.chip{background:#fff;padding:18px 12px;text-align:center}
+.chip b{display:block;font-size:22px;color:var(--navy);font-weight:800}
+.chip span{font-size:13px;color:var(--mut)}
+/* sections */
+section{padding:72px 0}
+section.alt{background:var(--light)}
+.eyebrow{color:var(--accent);font-weight:700;font-size:13.5px;letter-spacing:1.6px;text-transform:uppercase}
+h2{font-size:clamp(26px,3.4vw,36px);color:var(--navy);font-weight:800;letter-spacing:-.3px;margin:8px 0 14px}
+.lede{color:var(--mut);max-width:560px;font-size:16.5px}
+/* services */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 24px;transition:.15s}
+.card:hover{box-shadow:0 10px 30px rgba(10,31,68,.09);transform:translateY(-2px);border-color:#c9d2e2}
+.card .ico{width:46px;height:46px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:21px;margin-bottom:14px}
+.card h3{color:var(--navy);font-size:18px;margin-bottom:8px}
+.card p{color:var(--mut);font-size:14.5px}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px;counter-reset:st}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px 22px}
+.step::before{counter-increment:st;content:counter(st);position:absolute;top:-16px;left:20px;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:grid;place-items:center;font-size:16px}
+.step h3{color:var(--navy);font-size:16.5px;margin:8px 0 6px}
+.step p{color:var(--mut);font-size:14px}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+.stars{color:#7be3a8;letter-spacing:2px;font-size:16px}
+.rev p{font-size:14.5px;color:var(--ink);margin:12px 0 16px}
+.rev .who{display:flex;align-items:center;gap:10px}
+.rev .who .av{width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px}
+.rev .who b{font-size:14px;color:var(--navy);display:block}
+.rev .who span{font-size:12.5px;color:var(--mut)}
+.gbadge{display:flex;gap:6px;align-items:center;margin-top:26px;justify-content:center;color:var(--mut);font-size:14px}
+.gbadge b{color:var(--navy)}
+/* gallery */
+.gal{display:grid;grid-template-columns:1.5fr 1fr;gap:16px;margin-top:36px}
+.gal img{border-radius:14px;height:100%;width:100%;object-fit:cover;min-height:260px}
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-top:12px;overflow:hidden}
+summary{padding:18px 22px;font-weight:600;color:var(--navy);cursor:pointer;list-style:none;position:relative;padding-right:40px}
+summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--accent);font-weight:700}
+details[open] summary::after{content:"–"}
+details .a{padding:0 22px 18px;color:var(--mut);font-size:14.5px}
+/* final */
+.final{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;text-align:center}
+.final h2{color:#fff}
+.final p{color:#c3cde0;max-width:480px;margin:0 auto 26px}
+.final .btn{font-size:16px;padding:15px 30px}
+.final .tel{display:block;margin-top:16px;color:#fff;font-weight:700;font-size:20px;text-decoration:none}
+/* footer */
+footer{padding:34px 0;color:var(--mut);font-size:13.5px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* sticky call bar (mobile) */
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:200;display:none;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 8px;font-weight:700;text-decoration:none;font-size:15px}
+.callbar a.call{background:var(--navy);color:#fff}
+.callbar a.quote{background:var(--accent);color:#fff}
+@media(max-width:900px){
+ .chips{grid-template-columns:repeat(2,1fr)}
+ .grid3,.revs{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .gal{grid-template-columns:1fr}
+ .callbar{display:grid}
+ body{padding-bottom:58px}
+ .bar .btn{display:none}
+}
+@media(max-width:620px){
+ .grid3,.revs,.steps{grid-template-columns:1fr}
+ .hero img.bg{height:560px}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Plumber","name":"ClearFlow Plumbing","telephone":"+1-970-555-0129","address":{"@type":"PostalAddress","streetAddress":"135 W Olive St","addressLocality":"Fort Collins","addressRegion":"CO","postalCode":"80524","addressCountry":"US"},"priceRange":"$$","areaServed":"Fort Collins, CO","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"195"},"openingHours":"Mo-Su 00:00-24:00"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What does 24/7 emergency cost?","acceptedAnswer":{"@type":"Answer","text":"Yes — every inspection is free with zero obligation. We'll walk your roof, photograph anything we find, and show you the evidence before quoting a dollar."}},
+{"@type":"Question","name":"Do you really show the camera footage?","acceptedAnswer":{"@type":"Answer","text":"Every time. You'll see exactly what's in your pipes on our screen before we recommend anything. Mystery diagnoses are how plumbers lose trust — not us."}},
+{"@type":"Question","name":"Tank or tankless water heater?","acceptedAnswer":{"@type":"Answer","text":"Yes. Storm damage claims are our specialty — we document everything in the format insurers expect and meet your adjuster on-site."}}]}
+</script>
+</head>
+<body>
+
+<header>
+ <div class="bar">
+  <a class="logo" href="#top"><span class="mark">CF</span><span><b>ClearFlow Plumbing</b><span>Fort Collins, CO · Since 2003</span></span></a>
+  <div class="right">
+   <a class="phone" href="tel:+19705550129">📞 (970) 555-0129</a>
+   <a class="btn" href="#quote">Free Inspection</a>
+  </div>
+ </div>
+</header>
+
+<section class="hero" id="top" style="padding:0">
+ <img class="bg" src="assets/plumbing-hero.jpg" alt="ClearFlow plumber fixing a kitchen sink in Fort Collins">
+ <div class="over"><div class="in">
+  <span class="kick"><span class="dot"></span> Emergency? We answer 24/7</span>
+  <h1>The plumber Fort Collins<br><em>actually recommends.</em></h1>
+  <p class="sub">Upfront pricing before the wrench turns. Boot covers on, drop cloths down, and we leave it cleaner than we found it.</p>
+  <div class="cta-row">
+   <a class="btn" href="tel:+19705550129">📞 Call (970) 555-0129</a>
+   <a class="btn ghost" href="#quote" style="border-color:#fff;color:#fff">Request My Free Inspection</a>
+  </div>
+  <p class="micro">★★★★★ 4.9 from 195 Fort Collins neighbors · Licensed &amp; insured · 24/7 emergency</p>
+ </div></div>
+</section>
+
+<div class="chips">
+ <div class="chip"><b>23+</b><span>Years in NoCo</span></div>
+ <div class="chip"><b>8,200+</b><span>Jobs completed</span></div>
+ <div class="chip"><b>4.9★</b><span>Google rating</span></div>
+ <div class="chip"><b>24/7</b><span>Emergency line</span></div>
+</div>
+
+<section>
+ <div class="wrap">
+  <span class="eyebrow">What we do</span>
+  <h2>Every pipe, every drain, one team</h2>
+  <p class="lede">No subcontractors, no hourly meters. Flat-rate pricing approved by you before any work begins.</p>
+  <div class="grid3">
+   <div class="card"><div class="ico">🚿</div><h3>Repairs</h3><p>Leaks, clogs, drips, running toilets. Fixed right, priced flat, guaranteed in writing.</p></div>
+   <div class="card"><div class="ico">🛁</div><h3>Water Heaters</h3><p>Tank and tankless — repair or replace, with honest advice about which makes sense for your house.</p></div>
+   <div class="card"><div class="ico">🚨</div><h3>24/7 Emergency</h3><p>Burst pipe at 2am? A real person answers, and a stocked truck rolls. Night pricing posted up front.</p></div>
+   <div class="card"><div class="ico">🔍</div><h3>Camera Inspections</h3><p>We show you the inside of your pipes on screen before recommending anything. No mystery diagnoses.</p></div>
+   <div class="card"><div class="ico">🚽</div><h3>Fixtures &amp; Remodels</h3><p>Faucets, toilets, showers — quick swaps or full remodel rough-ins, done to code.</p></div>
+   <div class="card"><div class="ico">🏢</div><h3>Commercial</h3><p>Restaurants, offices, and rentals — after-hours service so business never stops.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt">
+ <div class="wrap">
+  <span class="eyebrow">How it works</span>
+  <h2>Four steps, zero surprises</h2>
+  <div class="steps">
+   <div class="step"><h3>Diagnosis</h3><p>Camera down the line, photos of the actual problem — you see what we see.</p></div>
+   <div class="step"><h3>Flat-rate quote</h3><p>One number, approved by you, before work starts. It doesn't change mid-job.</p></div>
+   <div class="step"><h3>Clean fix</h3><p>Boot covers, drop cloths, and a spotless cleanup — we respect your home.</p></div>
+   <div class="step"><h3>Guaranteed</h3><p>Written warranty on parts and labor. If it fails on us, fixing it is on us.</p></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <span class="eyebrow">Neighbors' words</span>
+  <h2>Why Fort Collins keeps calling us</h2>
+  <div class="revs">
+   <div class="rev"><div class="stars">★★★★★</div><p>"Basement flooded on Thanksgiving. They answered at 11pm, found the clog with a camera, and we had water again by morning. Price was exactly what they quoted at midnight."</p><div class="who"><span class="av">SM</span><span><b>Jen R.</b><span>Old Town</span></span></div></div>
+   <div class="rev"><div class="stars">★★★★★</div><p>"They camera-scoped my main line and showed me the roots on screen. Fixed for hundreds, not the thousands another guy quoted blind. I trust these people completely now."</p><div class="who"><span class="av">DR</span><span><b>Tom B.</b><span>Midtown</span></span></div></div>
+   <div class="rev"><div class="stars">★★★★★</div><p>"They wore boot covers. In my house. Unprompted. After years of contractors tracking mud through the kitchen, that alone earned my loyalty."</p><div class="who"><span class="av">PK</span><span><b>Aisha M.</b><span>Horsetooth</span></span></div></div>
+  </div>
+  <div class="gbadge">⭐ <b>4.9 on Google</b> · 195 reviews · Licensed &amp; Insured</div>
+ </div>
+</section>
+
+<section class="alt">
+ <div class="wrap">
+  <span class="eyebrow">Recent work</span>
+  <h2>Real jobs, real cleanups</h2>
+  <div class="gal">
+   <img src="assets/plumbing-hero.jpg" alt="Repairs done right the first time">
+   <img src="assets/team.jpg" alt="Respect for your home, start to finish">
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <span class="eyebrow">Straight answers</span>
+  <h2>Questions we hear every week</h2>
+  <details open><summary>What does 24/7 emergency cost?</summary><div class="a">Our night and weekend rates are posted right on our pricing page — no mystery markup. You'll know the number before the truck rolls.</div></details>
+  <details><summary>Do you really show the camera footage?</summary><div class="a">Every time. You'll see exactly what's in your pipes on our screen before we recommend anything. Mystery diagnoses are how plumbers lose trust — not us.</div></details>
+  <details><summary>Tank or tankless water heater?</summary><div class="a">Depends on your house and habits — we'll give you honest payback math for both instead of pushing whatever pays us more. Usually tankless wins for small households.</div></details>
+  <details><summary>Are you licensed and insured?</summary><div class="a">Fully licensed and insured in Colorado, and we pull permits when required — some things aren't worth cutting corners on.</div></details>
+ </div>
+</section>
+
+<section class="final" id="quote">
+ <div class="wrap">
+  <span class="eyebrow" style="color:#7be3a8">Fast, flat-rate, clean</span>
+  <h2>Water where it shouldn't be?</h2>
+  <p>Call the 24/7 line now — a stocked truck and a real human are both ready.</p>
+  <a class="btn" href="tel:+19705550129">📞 Call (970) 555-0129</a>
+  <a class="tel" href="mailto:hello@clearflowplumbing.example">or email hello@clearflowplumbing.example</a>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <span>© 2026 ClearFlow Plumbing · Fort Collins, CO · Licensed &amp; Insured</span>
+  <span>Free inspections · (970) 555-0129</span>
+ </div>
+</footer>
+
+<div class="callbar">
+ <a class="call" href="tel:+19705550129">📞 Call Now</a>
+ <a class="quote" href="#quote">Free Inspection</a>
+</div>
+
+</body>
+</html>
