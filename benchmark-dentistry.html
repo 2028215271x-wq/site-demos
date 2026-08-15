@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Benchmark Dentistry | Boise, ID</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?Nunito:wght@700;800;900&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<style>
+:root{--accent:#2C7A7B;--accent-dark:#225F60;--bg:#FFFFFF;--gl:#F4FAFA;--gm:#7C9A98}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Quicksand',sans-serif;color:#1F2D2D;background:var(--bg);line-height:1.6}
+h1,h2,h3,.btn-a{font-family:'Nunito',sans-serif}
+
+
+/* top ribbon */
+.ribbon{background:#2C7A7B;color:#fff;text-align:center;padding:10px 16px;font-size:14px;font-weight:600;letter-spacing:1px}
+.ribbon span{opacity:.9;font-weight:400}
+
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;background:rgba(255,255,255,.96);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.06)}
+.logo{font-family:'Nunito',sans-serif;font-size:26px;color:#1F2D2D;text-decoration:none;letter-spacing:0}
+.logo b{color:var(--accent)}
+nav .call{display:flex;align-items:center;gap:14px}
+nav .phone{font-family:'Nunito',sans-serif;font-size:24px;color:#1F2D2D;text-decoration:none}
+nav .btn-a{background:var(--accent);color:#fff;padding:13px 30px;border-radius:50px;text-decoration:none;font-size:19px;letter-spacing:1px;transition:transform .2s,box-shadow .2s;display:inline-block}
+nav .btn-a:hover{transform:translateY(-2px);box-shadow:0 8px 24px #2C7A7B55}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;min-height:88vh;align-items:center;gap:0;background:var(--gl)}
+.hero-copy{padding:60px 5vw 60px 6vw}
+.hero-copy .badge{display:inline-block;background:var(--accent);color:#fff;padding:8px 20px;border-radius:30px;font-size:13px;font-weight:700;letter-spacing:1.5px;margin-bottom:24px}
+.hero-copy h1{font-size:clamp(40px,5.2vw,68px);line-height:1.05;margin-bottom:22px;color:#16302F}
+.hero-copy p{font-size:19px;color:var(--gm);max-width:520px;margin-bottom:34px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.hero-cta .btn-a{background:var(--accent);color:#fff;padding:17px 38px;border-radius:50px;text-decoration:none;font-size:22px;letter-spacing:1px;transition:transform .2s,box-shadow .2s;display:inline-block}
+.hero-cta .btn-a:hover{transform:translateY(-2px);box-shadow:0 10px 30px #2C7A7B66}
+.hero-cta .btn-b{padding:17px 38px;border-radius:50px;border:2px solid #16302F;color:#16302F;text-decoration:none;font-size:18px;font-weight:600;transition:border-color .2s}
+.hero-cta .btn-b:hover{border-color:var(--accent)}
+.hero-meta{font-size:15px;color:var(--gm)}
+.hero-meta b{color:#1F2D2D}
+.hero-img{position:relative;height:100%;min-height:480px;overflow:hidden;background:linear-gradient(135deg,#2C7A7B22,#225F6044)}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;}
+.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(270deg,#fff 0%,transparent 35%)}
+
+/* sections */
+section{padding:80px 6vw}
+.svc h2,.revs h2,.gal h2,.areas h2{text-align:center;font-size:clamp(30px,3.6vw,44px);margin-bottom:14px;color:#16302F}
+.svc .sub,.revs .sub,.gal .sub{text-align:center;color:var(--gm);max-width:560px;margin:0 auto 52px;font-size:17px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.si{background:#fff;border-radius:40px;padding:32px 26px;border:1px solid rgba(0,0,0,.05);transition:transform .25s,box-shadow .25s}
+.si:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(0,0,0,.08)}
+.si-num{font-family:'Nunito',sans-serif;font-size:38px;color:var(--accent);opacity:.35;margin-bottom:10px}
+.si h3{font-size:21px;margin-bottom:8px;color:#16302F}
+.si p{font-size:15px;color:var(--gm)}
+
+/* areas strip */
+.areas{background:#2C7A7B;padding:44px 6vw;text-align:center}
+.areas h2{font-size:clamp(22px,2.6vw,30px);margin-bottom:8px;color:#fff}
+.areas p{color:rgba(255,255,255,.85);font-size:16px}
+.areas .cityline{margin-top:14px;font-weight:700;letter-spacing:1px;color:#fff;font-size:15px}
+
+/* reviews */
+.revs{background:#F4FAFA}
+.rc{background:#fff;border-radius:40px;padding:30px 26px;border:1px solid rgba(0,0,0,.04);box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.rc .rs{color:#F5A623;margin-bottom:12px;font-size:16px;letter-spacing:2px}
+.rc blockquote{font-size:15.5px;color:#3A4A48;font-style:italic;margin-bottom:18px}
+.rc .rm strong{display:block;color:#16302F}
+.rc .rm span{font-size:13px;color:var(--gm)}
+.revs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+
+/* gallery */
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.gi{position:relative;border-radius:40px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#2C7A7B33,#225F6055)}
+.gi.lg{grid-column:span 2;aspect-ratio:16/9}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gi:hover img{transform:scale(1.04)}
+.gcap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;padding:34px 20px 16px;font-size:15px;font-weight:600}
+
+/* trust bar */
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;text-align:center}
+.ti{padding:26px 12px;border-radius:40px;background:#fff;border:1px solid rgba(0,0,0,.05)}
+.tn{font-family:'Nunito',sans-serif;font-size:44px;color:var(--accent);line-height:1}
+.tl{font-size:13.5px;color:var(--gm);margin-top:8px;letter-spacing:.5px}
+
+/* members */
+.members{text-align:center;padding:36px 6vw;background:#fff;border-top:1px solid rgba(0,0,0,.04)}
+.members p{font-size:13px;color:var(--gm);margin-bottom:14px;letter-spacing:1px;text-transform:uppercase}
+.mb{display:inline-block;margin:4px 6px;padding:9px 20px;border-radius:30px;border:1px solid #D8E6E5;font-size:14px;color:#3A4A48}
+
+/* cta */
+.cta{text-align:center;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;padding:90px 6vw}
+.cta h2{font-size:clamp(32px,4vw,52px);margin-bottom:16px}
+.cta p{font-size:18px;opacity:.92;max-width:520px;margin:0 auto 36px}
+.cta .btn-a{background:#fff;color:var(--accent-dark);padding:18px 46px;border-radius:50px;text-decoration:none;font-size:22px;letter-spacing:1px;transition:transform .2s;display:inline-block}
+.cta .btn-a:hover{transform:translateY(-2px)}
+.cta .hours{margin-top:20px;font-size:14px;opacity:.8}
+
+/* footer */
+footer{background:#F2F8F7;padding:44px 6vw;text-align:center;color:var(--gm);font-size:13.5px}
+footer .fnote{margin-top:16px;padding:12px 18px;background:#fff;border-radius:12px;font-size:12px;opacity:.75;max-width:640px;margin-left:auto;margin-right:auto}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-img{min-height:340px;order:-1}
+  .hero-copy{padding:40px 6vw}
+  .gi.lg{grid-column:span 1;aspect-ratio:4/3}
+  nav .phone{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">★ NOW ACCEPTING NEW PATIENTS — Boise, ID ★ <span>(208) 376-2726</span></div>
+
+<nav>
+  <a class="logo" href="#">BENCHMARK <b>DENTAL</b></a>
+  <div class="call">
+    <a class="phone" href="tel:2083762726">(208) 376-2726</a>
+    <a class="btn-a" href="tel:2083762726">Call Now</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-copy" data-aos="fade-right">
+    <span class="badge">NOW ACCEPTING NEW PATIENTS</span>
+    <h1>Feel good about your smile.</h1>
+    <p>Dr. Clovis & Dr. Hunt have been taking care of Boise families for over 20 years. Gentle care, honest answers, and a smile you'll be proud of.</p>
+    <div class="hero-cta">
+      <a class="btn-a" href="tel:2083762726">(208) 376-2726</a>
+      <a class="btn-b" href="#book">Request Appointment</a>
+    </div>
+    <div class="hero-meta"><b>Mon–Wed 7:00 AM – 3:00 PM · Thu–Fri by appointment</b></div>
+  </div>
+  <div class="hero-img" data-aos="fade-left">
+    <img src="https://benchmarkdentistry.com/images/Dr.-Clovis--Dr.-Hunt-together_1.webp" alt="Benchmark Dentistry — Boise, ID" onerror="this.style.display='none'">
+  </div>
+</header>
+
+<section class="svc" id="services">
+  <h2 data-aos="fade-up">What We Do</h2>
+  <p class="sub" data-aos="fade-up">Straightforward services, honest answers — that's how Benchmark Dentistry has earned Boise, ID's trust for 20+ years.</p>
+  <div class="svc-grid">
+    <div class="si" data-aos="fade-up" data-aos-delay="0">
+      <div class="si-num">01</div>
+      <h3>Cleanings & Exams</h3>
+      <p>Gentle, thorough, never rushed</p>
+    </div>
+    <div class="si" data-aos="fade-up" data-aos-delay="60">
+      <div class="si-num">02</div>
+      <h3>Cosmetic Dentistry</h3>
+      <p>Veneers, bonding, smile design</p>
+    </div>
+    <div class="si" data-aos="fade-up" data-aos-delay="120">
+      <div class="si-num">03</div>
+      <h3>Tooth-Colored Fillings</h3>
+      <p>Natural-looking, metal-free</p>
+    </div>
+    <div class="si" data-aos="fade-up" data-aos-delay="180">
+      <div class="si-num">04</div>
+      <h3>Crowns & Bridges</h3>
+      <p>Strong, precise, comfortable</p>
+    </div>
+    <div class="si" data-aos="fade-up" data-aos-delay="240">
+      <div class="si-num">05</div>
+      <h3>Teeth Whitening</h3>
+      <p>Brighter in one visit</p>
+    </div>
+    <div class="si" data-aos="fade-up" data-aos-delay="300">
+      <div class="si-num">06</div>
+      <h3>Emergency Care</h3>
+      <p>Same-day appointments</p>
+    </div>
+    <div class="si" data-aos="fade-up" data-aos-delay="360">
+      <div class="si-num">07</div>
+      <h3>Family Dentistry</h3>
+      <p>Toddlers to grandparents</p>
+    </div>
+    <div class="si" data-aos="fade-up" data-aos-delay="420">
+      <div class="si-num">08</div>
+      <h3>Sedation Options</h3>
+      <p>Anxiety-free visits</p>
+    </div>
+  </div>
+</section>
+
+<div class="areas">
+  <h2>Proudly Serving Boise, ID &amp; Surrounding Areas</h2>
+  <p>undefined · (208) 376-2726 · Mon–Wed 7:00 AM – 3:00 PM · Thu–Fri by appointment</p>
+  <div class="cityline">BOISE · EAGLE · MERIDIAN · NAMPA · KUNA · STAR</div>
+</div>
+
+<section class="revs">
+  <h2 data-aos="fade-up">What Our Customers Say</h2>
+  <p class="sub" data-aos="fade-up">Real feedback from real Boise patients.</p>
+  <div class="revs-grid">
+    <div class="rc" data-aos="fade-up" data-aos-delay="100">
+      <div class="rs"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <blockquote>“Both of my kids see Dr. Clovis. The front desk knows us by name and never makes us feel rushed. That's rare these days.”</blockquote>
+      <div class="rm"><strong>Boise Mom of 3</strong><span>Boise · recent</span></div>
+    </div>
+    <div class="rc" data-aos="fade-up" data-aos-delay="200">
+      <div class="rs"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <blockquote>“I've been coming here for years. Dr. Hunt explains everything before he does it — no surprises, no upsells. Just honest dentistry.”</blockquote>
+      <div class="rm"><strong>Longtime patient</strong><span>Eagle · Google review</span></div>
+    </div>
+    <div class="rc" data-aos="fade-up" data-aos-delay="300">
+      <div class="rs"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <blockquote>“I avoided dentists for a decade. The team here changed that. They listened, went at my pace, and I actually look forward to checkups now.”</blockquote>
+      <div class="rm"><strong>Former dental-phobic</strong><span>Meridian · Google review</span></div>
+    </div>
+    <div class="rc" data-aos="fade-up" data-aos-delay="400">
+      <div class="rs"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      <blockquote>“First visit last month. Digital X-rays, clear pricing, and my cleaning was the gentlest I've ever had. So glad I found Benchmark.”</blockquote>
+      <div class="rm"><strong>New patient</strong><span>Boise · Google review</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="gal">
+  <h2 data-aos="fade-up">Real People, Real Work</h2>
+  <p class="sub" data-aos="fade-up">Benchmark Dentistry — Boise, ID. Photos from our actual team &amp; patients.</p>
+  <div class="gal-grid">
+    <div class="gi lg" data-aos="fade-up" data-aos-delay="0">
+      <img src="https://benchmarkdentistry.com/images/happy-family-boise-dentist_1.webp" alt="Benchmark Dentistry" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div class="gcap">Real Boise families, real smiles</div>
+    </div>
+    <div class="gi" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://benchmarkdentistry.com/images/confident-happy-dental-patient-white-teeth_1.webp" alt="Benchmark Dentistry" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div class="gcap">Confidence starts with your smile</div>
+    </div>
+    <div class="gi" data-aos="fade-up">
+      <img src="https://benchmarkdentistry.com/images/Dr.-Clovis--Dr.-Hunt-together_1.webp" alt="Benchmark Dentistry" loading="lazy" onerror="this.parentElement.style.display='none'">
+      <div class="gcap">Feel good about your smile.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="trust"><div class="ti" data-aos="zoom-in"><div class="tn">20+</div><div class="tl">Years in Boise</div></div><div class="ti" data-aos="zoom-in"><div class="tn">2</div><div class="tl">Caring Doctors</div></div><div class="ti" data-aos="zoom-in"><div class="tn">3</div><div class="tl">Professional Memberships</div></div><div class="ti" data-aos="zoom-in"><div class="tn">Same-Day</div><div class="tl">Emergency Visits</div></div>
+  </div>
+</section>
+
+<div class="members">
+  <p>Professional Memberships</p>
+  <span class="mb">American Dental Association</span><span class="mb">Academy of General Dentistry</span><span class="mb">Idaho State Dental Association</span>
+</div>
+
+<section class="cta" id="book">
+  <h2 data-aos="fade-up">Ready When You Are</h2>
+  <p data-aos="fade-up">Schedule your visit today — new patients always welcome.</p>
+  <a class="btn-a" href="tel:2083762726" data-aos="zoom-in">(208) 376-2726</a>
+  <div class="hours">Mon–Wed 7:00 AM – 3:00 PM · Thu–Fri by appointment</div>
+</section>
+
+<footer>
+  <div>© 2026 Benchmark Dentistry · Boise, ID · (208) 376-2726</div>
+  <div class="fnote">✦ DEMO CONCEPT — This is a complimentary website redesign concept for Benchmark Dentistry, built from publicly available information.</div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({once:true,duration:700,offset:80});</script>
+</body>
+</html>
