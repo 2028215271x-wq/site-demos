@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Summit Roofing Co. | Tulsa's Friendly Roofing Experts — Free Inspections</title>
+<meta name="description" content="Family-owned Tulsa roofer since 1998. Free inspections, honest quotes, most roofs done in 1-2 days. Call (918) 555-0184 today.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   v4 hybrid — v3 的骨架（信任前置/四步/FAQ/双JSON-LD/sticky bar/对话文案）
+               + v2 的视觉性格（近黑底 + 施工荧光黄 + 超大 display 字）
+   强调色 #e8ff2a = 施工安全服荧光黄（行业属性，色从图出）
+   签名细节：hero 底部斜切模拟屋顶斜面 + 流程超大衬线编号面板
+   特异度统一用 section.xxx 写法，避免 .alt/.dark 级联冲突
+   ============================================================ */
+:root{
+  --bg:#111;            /* 近黑，非藏蓝 */
+  --bg2:#0a0a0a;
+  --panel:#1a1a1a;      /* 卡片/弱底 */
+  --panel2:#222;
+  --ink:#f2f2f0;        /* 主文字，暖白 */
+  --mut:#9a9a94;        /* 次要文字 */
+  --acc:#e8ff2a;        /* 荧光黄 施工安全服 */
+  --acc-dim:#c8e810;
+  --line:#2a2a28;
+  --ok:#7be3a8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Archivo',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-weight:500}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 5vw}
+
+/* ---------- header ------ */
+header{position:sticky;top:0;z-index:100;background:rgba(17,17,17,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;max-width:1180px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff}
+.logo .mark{width:40px;height:40px;background:var(--acc);color:#111;display:grid;place-items:center;font-family:'Archivo Black',sans-serif;font-size:18px;transform:skewX(-6deg)}
+.logo b{font-family:'Archivo Black',sans-serif;font-size:19px;letter-spacing:.2px}
+.logo span{color:var(--mut);font-size:12px;display:block;margin-top:-3px;font-weight:500}
+.bar .right{display:flex;gap:14px;align-items:center}
+.phone{font-weight:700;color:var(--acc);text-decoration:none;font-size:16px;letter-spacing:.3px}
+.btn{display:inline-block;background:var(--acc);color:#111;font-family:'Archivo Black',sans-serif;font-weight:400;padding:13px 24px;text-decoration:none;font-size:14.5px;border:none;cursor:pointer;transition:.15s;letter-spacing:.3px;text-transform:uppercase}
+.btn:hover{background:#fff;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid var(--acc)}
+.btn.ghost:hover{background:var(--acc);color:#111}
+
+/* ---------- hero ---------- */
+section.hero{position:relative;color:#fff;isolation:isolate;padding:0}
+section.hero img.bg{width:100%;height:680px;object-fit:cover;filter:saturate(.85) contrast(1.05) brightness(.7)}
+section.hero .over{position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,10,10,.94) 0%,rgba(10,10,10,.72) 50%,rgba(10,10,10,.25) 100%);display:flex;align-items:center}
+section.hero .in{max-width:680px;padding:0 5vw}
+.kick{display:inline-flex;align-items:center;gap:9px;background:var(--acc);color:#111;padding:6px 14px;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:22px;transform:skewX(-6deg)}
+section.hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(40px,6vw,66px);line-height:1.02;font-weight:400;letter-spacing:-1px;text-transform:uppercase}
+section.hero h1 em{font-style:normal;color:var(--acc)}
+section.hero p.sub{font-size:18px;color:#cfcfc8;margin:20px 0 28px;max-width:540px;font-weight:500}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+section.hero .micro{margin-top:18px;font-size:13px;color:#9a9a94;letter-spacing:.3px}
+
+/* 签名细节：hero 底部斜切，模拟屋顶斜面 */
+section.hero .slope{position:absolute;left:0;right:0;bottom:-1px;height:56px;background:var(--bg);clip-path:polygon(0 100%,0 22%,100% 0,100% 100%)}
+
+/* ---------- trust chips — 黄色实心编号块 ---------- */
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:26px 5vw;max-width:1180px;margin:-34px auto 0;position:relative;z-index:5}
+.chip{background:var(--panel);padding:22px 16px;border-left:4px solid var(--acc)}
+.chip b{display:block;font-family:'Archivo Black',sans-serif;font-size:30px;color:var(--acc);font-weight:400}
+.chip span{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:1px}
+
+/* ---------- sections（统一 section.xxx 特异度，避免 .alt/.dark 级联冲突） ---------- */
+section{padding:80px 0}
+section.dark{background:var(--bg2)}        /* 深色节（用于流程/图廊/FAQ） */
+.eyebrow{display:inline-block;color:var(--acc);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;border-left:4px solid var(--acc);padding-left:12px}
+section h2{font-family:'Archivo Black',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:400;letter-spacing:-.5px;text-transform:uppercase;margin:0 0 16px}
+.lede{color:var(--mut);max-width:560px;font-size:17px}
+
+/* ---------- services — 用高对比色块替代 flat icon 卡 ---------- */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.card{background:var(--panel);padding:26px 24px;transition:.15s;position:relative;overflow:hidden}
+.card:hover{background:var(--panel2);transform:translateY(-3px)}
+.card .num{font-family:'Archivo Black',sans-serif;font-size:15px;color:var(--acc);margin-bottom:14px;letter-spacing:1px}
+.card h3{font-family:'Archivo Black',sans-serif;font-size:19px;font-weight:400;text-transform:uppercase;letter-spacing:.3px;margin-bottom:10px}
+.card p{color:var(--mut);font-size:14.5px}
+
+/* ---------- process — 超大衬线编号面板（施工编号感，签名细节 #2） ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+section.dark .step{background:var(--panel);padding:30px 24px 34px;border-top:5px solid var(--acc);position:relative}
+section.dark .step .big{
+  font-family:'Archivo Black',sans-serif;font-size:64px;line-height:.85;color:transparent;
+  -webkit-text-stroke:2px var(--acc);margin-bottom:20px;font-weight:400;display:block
+}
+section.dark .step h3{font-family:'Archivo Black',sans-serif;font-size:17px;font-weight:400;text-transform:uppercase;letter-spacing:.4px;margin-bottom:9px}
+section.dark .step p{color:var(--mut);font-size:14px}
+
+/* ---------- reviews ---------- */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+section .rev{background:var(--panel);padding:26px}
+.rev .stars{color:var(--acc);letter-spacing:3px;font-size:16px}
+.rev .quote{font-size:14.5px;color:var(--ink);margin:14px 0 18px}
+.rev .who{display:flex;align-items:center;gap:11px}
+.rev .who .av{width:42px;height:42px;background:var(--acc);color:#111;display:grid;place-items:center;font-family:'Archivo Black',sans-serif;font-size:15px}
+.rev .who b{font-size:14px;color:#fff;font-family:'Archivo Black',sans-serif;display:block;font-weight:400;text-transform:uppercase}
+.rev .who span{font-size:12.5px;color:var(--mut)}
+.gbadge{font-size:14px;color:var(--mut)}
+.pillrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+section .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--panel);padding:10px 18px;font-size:13.5px;font-weight:600;color:var(--acc);text-transform:uppercase;letter-spacing:.5px}
+
+/* ---------- gallery ---------- */
+.gal{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin-top:40px}
+.gal img{height:100%;width:100%;object-fit:cover;min-height:260px;filter:grayscale(.2) contrast(1.05)}
+.gal img:hover{filter:grayscale(0) contrast(1.05)}
+
+/* ---------- faq ---------- */
+section.dark details{background:var(--panel);border-left:4px solid var(--acc);margin-top:12px}
+section.dark summary{padding:18px 22px;font-family:'Archivo Black',sans-serif;font-weight:400;font-size:15.5px;cursor:pointer;list-style:none;position:relative;padding-right:44px;text-transform:uppercase;letter-spacing:.3px}
+section.dark summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--acc)}
+section.dark details[open] summary::after{content:"–"}
+section.dark details .a{padding:0 22px 18px;color:var(--mut);font-size:14.5px}
+
+/* ---------- final CTA ---------- */
+section.final{background:var(--bg2);text-align:center;position:relative}
+section.final::before{content:"";display:block;height:44px;background:var(--bg);clip-path:polygon(0 0,100% 100%,0 100%)} /* 倒斜切呼应屋顶 */
+section.final h2{color:#fff}
+section.final h2 .hl{color:var(--acc)}
+section.final p{color:var(--mut);max-width:500px;margin:0 auto 30px}
+section.final .btn{font-size:16px;padding:16px 34px}
+section.final .tel{display:block;margin-top:18px;color:var(--acc);font-weight:700;font-size:20px;text-decoration:none}
+
+/* ---------- footer ---------- */
+footer{padding:34px 0;color:var(--mut);font-size:13.5px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* ---------- sticky call bar (mobile) ---------- */
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:200;display:none;grid-template-columns:1fr 1fr;gap:2px;background:#111}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 8px;font-family:'Archivo Black',sans-serif;font-weight:400;text-decoration:none;font-size:14px;text-transform:uppercase;letter-spacing:.5px}
+.callbar a.call{background:var(--bg2);color:#fff}
+.callbar a.quote{background:var(--acc);color:#111}
+
+@media(max-width:900px){
+ .chips{grid-template-columns:repeat(2,1fr)}
+ .grid3,.revs{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .gal{grid-template-columns:1fr}
+ .callbar{display:grid}
+ body{padding-bottom:58px}
+ .bar .btn{display:none}
+}
+@media(max-width:620px){
+ .grid3,.revs,.steps{grid-template-columns:1fr}
+ section.hero img.bg{height:600px}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RoofingContractor","name":"Summit Roofing Co.","telephone":"+1-918-555-0184","address":{"@type":"PostalAddress","streetAddress":"4821 S Memorial Dr","addressLocality":"Tulsa","addressRegion":"OK","postalCode":"74145","addressCountry":"US"},"priceRange":"$$","areaServed":"Tulsa, OK","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"187"},"openingHours":"Mo-Sa 07:00-19:00"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do you really do free inspections?","acceptedAnswer":{"@type":"Answer","text":"Yes — every inspection is free with zero obligation. We'll walk your roof, photograph anything we find, and show you the evidence before quoting a dollar."}},
+{"@type":"Question","name":"How long does a roof replacement take?","acceptedAnswer":{"@type":"Answer","text":"Most Tulsa homes are completed in 1-2 days, including full cleanup and a magnetic nail sweep of your yard."}},
+{"@type":"Question","name":"Do you help with insurance claims?","acceptedAnswer":{"@type":"Answer","text":"Yes. Storm damage claims are our specialty — we document everything in the format insurers expect and meet your adjuster on-site."}}]}
+</script>
+</head>
+<body>
+
+<header>
+ <div class="bar">
+  <a class="logo" href="#top"><span class="mark">SR</span><span><b>Summit Roofing</b><span>Tulsa, OK · Since 1998</span></span></a>
+  <div class="right">
+   <a class="phone" href="tel:+19185550184">📞 (918) 555-0184</a>
+   <a class="btn" href="#quote">Free Inspection</a>
+  </div>
+ </div>
+</header>
+
+<section class="hero" id="top">
+ <img class="bg" src="assets/hero.jpg" alt="Summit crew installing architectural shingles, golden hour">
+ <div class="over"><div class="in">
+  <span class="kick">Currently booking inspections this week</span>
+  <h1>Tulsa's friendly roofing experts.<br><em>Honest work. Fair prices.</em></h1>
+  <p class="sub">Family-owned since 1998. Free inspections with photo evidence — you see exactly what we see before you spend a dollar.</p>
+  <div class="cta-row">
+   <a class="btn" href="tel:+19185550184">📞 Call (918) 555-0184</a>
+   <a class="btn ghost" href="#quote">Request My Free Inspection</a>
+  </div>
+  <p class="micro">★★★★★ 4.9 from 187 Tulsa neighbors · Licensed &amp; insured · GAF certified</p>
+ </div></div>
+ <div class="slope"></div>
+</section>
+
+<div class="chips">
+ <div class="chip"><b>27+</b><span>Years serving Tulsa</span></div>
+ <div class="chip"><b>3,400+</b><span>Roofs completed</span></div>
+ <div class="chip"><b>4.9★</b><span>Google rating</span></div>
+ <div class="chip"><b>24 hr</b><span>Storm response</span></div>
+</div>
+
+<section>
+ <div class="wrap">
+  <span class="eyebrow">What we do</span>
+  <h2>Everything your roof needs, one crew</h2>
+  <p class="lede">No subcontractors, no runaround. The person who inspects your roof is on the crew that fixes it.</p>
+  <div class="grid3">
+   <div class="card"><div class="num">/01</div><h3>Roof Replacement</h3><p>Architectural shingles, metal, and tile. Most homes finished in 1-2 days with full yard cleanup.</p></div>
+   <div class="card"><div class="num">/02</div><h3>Roof Repair</h3><p>Leaks, missing shingles, flashing failures. If a repair will last, we'll tell you — and when it won't.</p></div>
+   <div class="card"><div class="num">/03</div><h3>Storm &amp; Insurance</h3><p>Hail and wind damage documented in insurer-ready format. We meet your adjuster on-site.</p></div>
+   <div class="card"><div class="num">/04</div><h3>Free Inspections</h3><p>Photo evidence of everything we find. Zero obligation, zero pressure — ever.</p></div>
+   <div class="card"><div class="num">/05</div><h3>Gutters &amp; Siding</h3><p>Seamless gutters, soffit and fascia. One crew for the whole exterior.</p></div>
+   <div class="card"><div class="num">/06</div><h3>Commercial</h3><p>Flat and low-slope systems for local businesses, with after-hours installation available.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <span class="eyebrow">How it works</span>
+  <h2>Four steps, zero surprises</h2>
+  <div class="steps">
+   <div class="step"><span class="big">01</span><h3>Free inspection</h3><p>We walk your roof and photograph every issue — you see what we see.</p></div>
+   <div class="step"><span class="big">02</span><h3>Honest quote</h3><p>Line-item pricing in plain English. Repair if repair will last; replace only when it's time.</p></div>
+   <div class="step"><span class="big">03</span><h3>1-2 day install</h3><p>Certified crew, quality underlayment, magnetic nail sweep when we're done.</p></div>
+   <div class="step"><span class="big">04</span><h3>Follow-through</h3><p>Workmanship warranty, registration handled, and a real human answers when you call.</p></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <span class="eyebrow">Neighbors' words</span>
+  <h2>Why Tulsa keeps calling us back</h2>
+  <div class="revs">
+   <div class="rev"><div class="stars">★★★★★</div><p class="quote">"Hail wrecked our roof in April. They met the insurance adjuster, handled all the paperwork, and the new roof was on in two days. Yard was cleaner after than before."</p><div class="who"><span class="av">SM</span><span><b>Sarah M.</b><span>South Tulsa</span></span></div></div>
+   <div class="rev"><div class="stars">★★★★★</div><p class="quote">"Two other companies told me I needed a full replacement. Summit showed me photos and said a repair would hold for years. Guess who got my business — and my mom's."</p><div class="who"><span class="av">DR</span><span><b>Dale R.</b><span>Broken Arrow</span></span></div></div>
+   <div class="rev"><div class="stars">★★★★★</div><p class="quote">"Fair price, fast crew, and they actually answer the phone. After three roofers who ghosted me, that alone was worth five stars."</p><div class="who"><span class="av">PK</span><span><b>Priya K.</b><span>Jenks</span></span></div></div>
+  </div>
+  <div class="pillrow"><span class="pill">⭐ 4.9 on Google</span><span class="pill">🏆 BBB A+ Accredited</span><span class="pill">✅ Licensed &amp; Insured</span></div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <span class="eyebrow">Recent work</span>
+  <h2>Real Tulsa roofs, real results</h2>
+  <div class="gal">
+   <img src="assets/work1.jpg" alt="Architectural shingle detail, nail-gun work">
+   <img src="assets/work2.jpg" alt="Completed roof, crisp ridge line">
+   <img src="assets/work3.jpg" alt="Pipe boot flashing sealed, macro detail">
+   <img src="assets/team.jpg" alt="The Summit crew and truck">
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <span class="eyebrow">Straight answers</span>
+  <h2>Questions we hear every week</h2>
+  <details open><summary>Do you really do free inspections?</summary><div class="a">Yes — every inspection is free with zero obligation. We photograph everything and show you the evidence before quoting a dollar.</div></details>
+  <details><summary>How long does a roof replacement take?</summary><div class="a">Most Tulsa homes are completed in 1-2 days, including full cleanup and a magnetic nail sweep of your yard.</div></details>
+  <details><summary>Do you help with insurance claims?</summary><div class="a">Yes. Storm damage is our specialty — we document in the format insurers expect and meet your adjuster on-site.</div></details>
+  <details><summary>Repair or replace — how do I know you're being honest?</summary><div class="a">Every recommendation comes with photos. If a repair will honestly last, we say so. We'd rather earn your next roof than sell you one early.</div></details>
+ </div>
+</section>
+
+<section class="final" id="quote">
+ <div class="wrap">
+  <span class="eyebrow" style="border-color:var(--acc)">Zero pressure, zero cost</span>
+  <h2>Get your <span class="hl">free inspection</span> this week</h2>
+  <p>Most inspections take 30 minutes. You get photos, a straight answer, and a fair price — whatever you decide.</p>
+  <a class="btn" href="tel:+19185550184">📞 Call (918) 555-0184</a>
+  <a class="tel" href="mailto:hello@summitroofing.example">or email hello@summitroofing.example</a>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <span>© 2026 Summit Roofing Co. · Tulsa, OK · Licensed &amp; Insured</span>
+  <span>Free inspections · (918) 555-0184</span>
+ </div>
+</footer>
+
+<div class="callbar">
+ <a class="call" href="tel:+19185550184">📞 Call Now</a>
+ <a class="quote" href="#quote">Free Inspection</a>
+</div>
+
+</body>
+</html>
